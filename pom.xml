@@ -6,7 +6,7 @@
 
     <groupId>dev.blackdev</groupId>
     <artifactId>TicketBot</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>v1</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
