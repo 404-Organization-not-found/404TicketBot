@@ -45,7 +45,7 @@ public class TicketListener extends ListenerAdapter {
                                 ticketCreators.put(channel.getIdLong(), user.getIdLong());
                                 Role role = guild.getRoleById(ROLE_1_ID);
                                 Role role2 = guild.getRoleById(ROLE_2_ID);
-                                channel.sendMessage("Ticket created by " + user.getAsMention() + " A Staff member will be with you shortly. " + role.getAsMention() + " " + role2.getAsMention())
+                                channel.sendMessage("Ticket created by " + user.getAsMention() + " for reason: " + selected + ". A Staff member will be with you shortly. " + role.getAsMention() + " " + role2.getAsMention())
                                         .mentionRoles(ROLE_1_ID, ROLE_2_ID)
                                         .setActionRow(Button.danger("ticket:close", "Close Ticket"))
                                         .queue();

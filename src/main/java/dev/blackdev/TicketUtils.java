@@ -19,7 +19,7 @@ public class TicketUtils {
     public static void sendTicketPanel(JDA jda) {
         TextChannel channel = jda.getTextChannelById(TICKET_PANEL_CHANNEL_ID);
         if (channel != null) {
-            // Clear the channel
+
             CompletableFuture<Void> clearChannelFuture = channel.getIterableHistory().takeAsync(100)
                     .thenCompose(messages -> {
                         CompletableFuture<?>[] futures = messages.stream()
@@ -36,8 +36,10 @@ public class TicketUtils {
                         .setColor(Color.BLUE);
 
                 StringSelectMenu menu = StringSelectMenu.create("ticket:select")
-                        .addOption("General Support", "general")
-                        .addOption("Technical Support", "technical")
+                        .addOption("Support 🎗️", "Support 🎗")
+                        .addOption("Giveaway Claim 🎉", "Giveaway Claim 🎉")
+                        .addOption("Report 🆘", "Report 🆘")
+                        .addOption("PartnerRequest 📬", "PartnerRequest 📬")
                         .build();
 
                 MessageCreateData message = new MessageCreateBuilder()
